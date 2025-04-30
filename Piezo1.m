@@ -1,7 +1,7 @@
 %% IPiezo (Forouzandehmehr et al., 2023: https://doi.org/10.22489/CinC.2023.359)
 % Author: Amin Forouzandehmehr
 
-E_P = 0;                % Volt 55e-3 from Paulina Czarnecki or 0 mV from https://doi.org/10.1073/pnas.2215747120 and https://doi.org/10.1038/s41467-023-36931-0.
+E_P = 0;                % Volt 55e-3 from Paulina Czarnecki OR 0 mV from https://doi.org/10.1073/pnas.2215747120 and https://doi.org/10.1038/s41467-023-36931-0 OR 45e-3 from Moroni et al., 2018 (https://doi.org/10.1038/s41467-018-03502-7).
 g_p = 0.3039;           % S/F from: https://doi.org/10.1038/s41467-023-36931-0
 tau_p = 0.1;            % Time constant
 cf = 1.1626e-01;        % The conversion factor Cm/(F*Vc*1e-18): A/F to mM/s
