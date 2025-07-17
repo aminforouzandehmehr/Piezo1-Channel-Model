@@ -19,5 +19,9 @@ ta_Xs      = coeff_Q10_generico_tau * 30.0*al_Xs*be_Xs/100.0;
 dY(35, 1)   = (Xs_inf-Y(35))/ta_Xs;
 
 i_Pie = 1 * g_p*Y(34)*Y(35)*(Y(1)-E_P);       % IPiezo1 (A/F)
-Jpz = 1* abs(i_Pie) * cf;                     % Ca2+ flux of Piezo1 (mM/s)
+Jpiezo = 1* i_Pie * cf;                     % Ca2+ flux of Piezo1 (mM/s)
 mm = ta_Xs;                                   % Inactivation 
+
+% Example of the integration of Jpiezo into dCai/dt of a cell:
+%Cai
+%dY(3,1) = Cai_bufc * (i_leak - i_up + i_rel - ((i_CaL + i_b_Ca + i_PCa - 2.0*i_NaCa + Jpizeo) * Cm / (2.0 * Vc * F * 1.0e-18)) - JCaBMyo);
