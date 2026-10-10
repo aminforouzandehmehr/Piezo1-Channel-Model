@@ -22,6 +22,11 @@ i_Pie = 1 * g_p*Y(34)*Y(35)*(Y(1)-E_P);       % IPiezo1 (A/F)
 Jpiezo = 1* i_Pie * cf;                     % Ca2+ flux of Piezo1 (mM/s)
 mm = ta_Xs;                                   % Inactivation 
 
-% Example of the integration of Jpiezo into dCai/dt of a cell:
-%Cai
-%dY(3,1) = Cai_bufc * (i_leak - i_up + i_rel - ((i_CaL + i_b_Ca + i_PCa - 2.0*i_NaCa + Jpizeo) * Cm / (2.0 * Vc * F * 1.0e-18)) - JCaBMyo);
+% Example of the integration:
+% Convert the Piezo1 current to a signed calcium flux in mM/s.
+% Jpiezo = i_Pie * cf;
+
+% Include the Piezo1 flux in the host calcium balance.
+% dY(3,1) = Cai_bufc * (i_leak - i_up + i_rel ...
+%    - (i_CaL + i_b_Ca + i_PCa - 2.0*i_NaCa) ...
+%    * Cm/(2.0*Vc*F*1.0e-18) - JCaBMyo - Jpiezo);
