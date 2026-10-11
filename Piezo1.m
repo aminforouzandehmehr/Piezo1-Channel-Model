@@ -15,7 +15,7 @@ dY(34,1) = (mpi-Y(34))/tau_p;
 Xs_inf = 2.0/(1.0+exp((-Y(1)*1000.0-0.0)/16.0)); 
 al_Xs    = 1/sqrt(1.0+exp((-60.0+Y(1)*1000.0)/50.0)); 
 be_Xs     = 900.0/(1.0+exp((+171.0-Y(1)*1000.0)/72.0)); 
-ta_Xs      = coeff_Q10_generico_tau * 30.0*al_Xs*be_Xs/100.0;
+ta_Xs      = 1e-3 * coeff_Q10_generico_tau * 30.0*al_Xs*be_Xs/100.0;   
 dY(35, 1)   = (Xs_inf-Y(35))/ta_Xs;
 
 i_Pie = 1 * g_p*Y(34)*Y(35)*(Y(1)-E_P);       % IPiezo1 (A/F)
